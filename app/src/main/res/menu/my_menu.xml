@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/homeFragment"
+        android:enabled="true"
+        android:icon="@drawable/icons_8_increase"
+        android:menuCategory="secondary"
+        android:title="" />
+    <item
+        android:id="@+id/coinFragment"
+        android:enabled="true"
+        android:icon="@drawable/icons_8_chart"
+        android:menuCategory="secondary"
+        android:title="" />
+    <item
+        android:id="@+id/newsFragment"
+        android:enabled="true"
+        android:icon="@drawable/icons_8_news"
+        android:menuCategory="secondary"
+        android:title="" />
+    <item
+        android:id="@+id/menuFragment"
+        android:enabled="true"
+        android:icon="@drawable/icons_8_customer"
+        android:menuCategory="secondary"
+        android:title="" />
+</menu>

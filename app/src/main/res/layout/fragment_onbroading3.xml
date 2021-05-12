@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment.OnbroadingFragment3">
+
+    <!-- TODO: Update blank fragment layout -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white">
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="@dimen/width_button_back"
+                android:layout_height="@dimen/heigh_button_back"
+                android:layout_marginStart="@dimen/_30dp"
+                android:layout_marginTop="@dimen/_50dp"
+                android:contentDescription="@string/todo"
+                android:src="@drawable/icons_8_expand_arrow"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/btnSkipOnbroad3"
+                style="@style/TextViewSkipStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/skip"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/imageView1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_153dp"
+                android:layout_marginEnd="@dimen/_9dp"
+                android:adjustViewBounds="true"
+                android:contentDescription="@string/todo"
+                android:src="@drawable/componente_5_2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_9dp"
+                android:layout_marginTop="@dimen/_127dp"
+                android:adjustViewBounds="true"
+                android:contentDescription="@string/todo"
+                android:src="@drawable/gruppo_di_maschere_4_2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView"
+                style="@style/TextViewAdvertisementStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_46dp"
+                android:layout_marginTop="@dimen/_58dp"
+                android:text="@string/keep_your"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/imageView2" />
+
+            <TextView
+                android:id="@+id/textView1"
+                style="@style/TextViewAdvertisementStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_46dp"
+                android:layout_marginTop="@dimen/_91dp"
+                android:text="@string/investment_safe"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/imageView2" />
+
+            <TextView
+                android:id="@+id/textView2"
+                style="@style/TextViewDescriptionStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_46dp"
+                android:layout_marginTop="@dimen/_7dp"
+                android:text="@string/ex_totam_praesentium_incidunt_aut"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView1" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_47dp"
+                android:layout_marginTop="@dimen/_60dp"
+                android:layout_marginBottom="@dimen/_66dp"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView2">
+
+                <View
+                    android:layout_width="@dimen/width_cursor_oval"
+                    android:layout_height="@dimen/heigh_cursor_oval"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:background="@drawable/cursor_oval_background" />
+
+                <View
+                    android:layout_width="@dimen/width_cursor_oval"
+                    android:layout_height="@dimen/heigh_cursor_oval"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="@dimen/_6dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/cursor_oval_background" />
+
+                <View
+                    android:layout_width="@dimen/width_tracciato"
+                    android:layout_height="@dimen/heigh_tracciato"
+                    android:layout_marginStart="@dimen/_6dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/tracciato_background" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btnStart"
+                style="@style/TextButtonOnboardingStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_40dp"
+                android:layout_marginEnd="@dimen/_51dp"
+                android:layout_marginBottom="@dimen/_52dp"
+                android:background="@drawable/button_onboarding_background"
+                android:paddingStart="@dimen/_28dp"
+                android:paddingTop="@dimen/_12dp"
+                android:paddingEnd="@dimen/_29dp"
+                android:paddingBottom="@dimen/_15dp"
+                android:text="@string/start"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

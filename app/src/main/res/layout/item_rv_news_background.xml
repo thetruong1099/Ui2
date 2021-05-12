@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/_21dp"
+    android:background="@color/white">
+
+    <ImageView
+        android:id="@+id/imgAd"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/todo"
+        android:src="@drawable/ad_1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvDiscount"
+        style="@style/TextStyle14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_21dp"
+        android:layout_marginTop="@dimen/_11dp"
+        android:text="@string/alt_3_87"
+        app:layout_constraintStart_toEndOf="@+id/imgAd"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvDate"
+        style="@style/TextStyle15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_11dp"
+        android:layout_marginEnd="@dimen/_66dp"
+        android:text="@string/_3_sept_2020"
+        android:textColor="@color/color_3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvTitle"
+        style="@style/TextStyle16"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_20dp"
+        android:layout_marginTop="@dimen/_5dp"
+        android:text="@string/atlantia"
+        app:layout_constraintStart_toEndOf="@+id/imgAd"
+        app:layout_constraintTop_toBottomOf="@+id/tvDiscount" />
+
+    <TextView
+        android:id="@+id/textView22"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_21dp"
+        android:layout_marginTop="@dimen/_3dp"
+        android:layout_marginBottom="@dimen/_21dp"
+        android:fontFamily="@font/lato_light"
+        android:text="Illum velit nam voluptatum enim aut \nratione ratione officiis totam. \nMollitia eum sint tempora ducimus"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imgAd"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitle" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/_7dp"
+        android:layout_marginBottom="7dp"
+        android:contentDescription="@string/todo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/gruppo_di_maschere_1_clipped" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/_21dp"
+    android:orientation="horizontal">
+
+    <ImageView
+        android:id="@+id/imgIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginStart="49dp"
+        android:alpha="0.68"
+        android:contentDescription="@string/todo"
+        app:srcCompat="@drawable/icons_8_profit_2" />
+
+    <TextView
+        android:id="@+id/tvNameTool"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_14dp"
+        android:fontFamily="@font/raleway_medium"
+        android:text="@string/select_stocks"
+        android:textColor="#68454545"
+        android:textSize="15sp" />
+</LinearLayout>

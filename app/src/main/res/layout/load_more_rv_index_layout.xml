@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <Button
+        android:id="@+id/btnLoadMore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/_35dp"
+        android:layout_marginBottom="@dimen/_33dp"
+        android:background="@drawable/button_background_4"
+        android:fontFamily="@font/raleway_medium"
+        android:paddingStart="@dimen/_23dp"
+        android:paddingTop="@dimen/_8dp"
+        android:paddingEnd="@dimen/_21dp"
+        android:paddingBottom="@dimen/_8dp"
+        android:text="@string/load_more"
+        android:textColor="@color/white"
+        android:textSize="15sp" />
+
+</LinearLayout>
