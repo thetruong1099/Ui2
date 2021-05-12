@@ -24,7 +24,9 @@ class OnboardingActivity : AppCompatActivity() {
         sharePreference = getSharedPreferences("myData", Context.MODE_PRIVATE)
         if (sharePreference == null) setfragment(onboarding1)
         else {
-            if (sharePreference.getBoolean("statusOnboarding", true) == true) setfragment(onboarding1)
+            if (sharePreference.getBoolean("statusOnboarding", true) == true) setfragment(
+                onboarding1
+            )
             else setIntentToLogin()
         }
     }

@@ -140,8 +140,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="@dimen/_27dp"
-                    android:layout_marginEnd="@dimen/_24dp"
                     android:layout_marginTop="@dimen/_10dp"
+                    android:layout_marginEnd="@dimen/_24dp"
                     android:adjustViewBounds="true"
                     android:contentDescription="@string/todo"
                     android:src="@drawable/main" />

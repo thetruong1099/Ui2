@@ -14,9 +14,7 @@ import kotlinx.android.synthetic.main.load_more_rv_index_layout.view.*
 class RecyclerViewIndexAdapter(var arrayList: ArrayList<Index>) :
     RecyclerView.Adapter<RecyclerViewIndexAdapter.ViewHolder>() {
 
-
-
-    class ViewHolder(view: View): RecyclerView.ViewHolder(view) {
+    class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         val tvName = view.tvName
         val tvLocal = view.tvLocal
         val tvTime = view.tvTime
@@ -36,14 +34,14 @@ class RecyclerViewIndexAdapter(var arrayList: ArrayList<Index>) :
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        holder.tvName.text = arrayList[position].name + " "+ (position+1).toString()
+        holder.tvName.text = arrayList[position].name + " " + (position + 1).toString()
         holder.tvLocal.text = arrayList[position].local
         holder.tvTime.text = arrayList[position].time
         holder.tvPrice.text = arrayList[position].price
         holder.tvState.text = arrayList[position].statePoint
     }
 
-    fun deleteItem(pos:Int){
+    fun deleteItem(pos: Int) {
         arrayList.removeAt(pos)
         notifyItemRemoved(pos)
     }

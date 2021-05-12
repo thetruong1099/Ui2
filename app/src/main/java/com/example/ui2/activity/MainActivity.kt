@@ -80,16 +80,6 @@ class MainActivity : AppCompatActivity() {
             }
             false
         }
-
-//        button.setOnClickListener {
-//            navController.removeElementOverlap(navController)
-//        }
-//
-//        button5.setOnClickListener {
-//            for (i in navController.backStack){
-//                Log.d("aaaa", "onCreate: ${i.destination.displayName}")
-//            }
-//        }
     }
 
     @SuppressLint("RestrictedApi")

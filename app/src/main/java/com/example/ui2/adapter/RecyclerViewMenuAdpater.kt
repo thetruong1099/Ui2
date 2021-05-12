@@ -55,11 +55,13 @@ class RecyclerViewMenuAdpater(var arrayList: ArrayList<MenuItem>) :
             holder.fabFun.setImageResource(arrayList[position].iconImg!!)
             holder.fabFun.compatElevation = 0.0f
             holder.fabFun.setOnTouchListener { v, event ->
-                if(event.action == MotionEvent.ACTION_UP){
-                    holder.fabFun.backgroundTintList = ColorStateList.valueOf(Color.parseColor("#de1db8"))
+                if (event.action == MotionEvent.ACTION_UP) {
+                    holder.fabFun.backgroundTintList =
+                        ColorStateList.valueOf(Color.parseColor("#de1db8"))
                 }
-                if (event.action == MotionEvent.ACTION_DOWN){
-                    holder.fabFun.backgroundTintList = ColorStateList.valueOf(Color.parseColor("#e67e22"))
+                if (event.action == MotionEvent.ACTION_DOWN) {
+                    holder.fabFun.backgroundTintList =
+                        ColorStateList.valueOf(Color.parseColor("#e67e22"))
                 }
                 false
             }

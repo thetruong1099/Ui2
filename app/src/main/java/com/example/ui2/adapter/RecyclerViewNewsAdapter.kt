@@ -10,10 +10,10 @@ import com.example.ui2.fragment.ListNewsFragmentDirections
 import com.example.ui2.model.News
 import kotlinx.android.synthetic.main.item_rv_news_background.view.*
 
-class RecyclerViewNewsAdapter(var arrayList: ArrayList<News>):
+class RecyclerViewNewsAdapter(var arrayList: ArrayList<News>) :
     RecyclerView.Adapter<RecyclerViewNewsAdapter.ViewHolder>() {
 
-    class ViewHolder(view: View): RecyclerView.ViewHolder(view) {
+    class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         var tvTitle = view.tvTitle
         var imgAD = view.imgAd
         var tvDiscount = view.tvDiscount
@@ -42,7 +42,8 @@ class RecyclerViewNewsAdapter(var arrayList: ArrayList<News>):
         holder.imgAD.setOnClickListener {
             var navController = it.findNavController()
             var article = arrayList[position].title
-            val action = ListNewsFragmentDirections.actionListNewsFragmentToNewsArticleFragment(article)
+            val action =
+                ListNewsFragmentDirections.actionListNewsFragmentToNewsArticleFragment(article)
             navController.navigate(action)
         }
     }

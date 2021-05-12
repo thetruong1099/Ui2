@@ -37,26 +37,26 @@ class EmailActivity : AppCompatActivity() {
         overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right)
     }
 
-    private fun counterTime(){
-        job = CoroutineScope(Dispatchers.Default).launch{
+    private fun counterTime() {
+        job = CoroutineScope(Dispatchers.Default).launch {
             var numTime = 31
-            repeat(31){
+            repeat(31) {
                 numTime--
                 delay(1000)
                 updateUi(numTime)
             }
-            if(numTime==0) intentToConfirmPassword()
+            if (numTime == 0) intentToConfirmPassword()
         }
     }
 
 
-    private suspend fun updateUi(number:Int){
-        withContext(Dispatchers.Main){
+    private suspend fun updateUi(number: Int) {
+        withContext(Dispatchers.Main) {
             tvCounterTimer.text = "Wait $number seconds before sending it"
         }
     }
 
-    private fun intentToConfirmPassword(){
+    private fun intentToConfirmPassword() {
         resetPassword()
         var intent = Intent(this, ConfirmPasswordChangedActivity::class.java)
         intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK)
@@ -64,7 +64,7 @@ class EmailActivity : AppCompatActivity() {
         overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left)
     }
 
-    private fun resetPassword(){
+    private fun resetPassword() {
         val sharedPreferences = getSharedPreferences("myData", Context.MODE_PRIVATE)
         val editor = sharedPreferences.edit()
         editor.putString("password", "1234567")

@@ -13,7 +13,7 @@ import androidx.navigation.fragment.findNavController
 import com.example.ui2.R
 import com.example.ui2.fragment.NewsFragment
 
-open class CustomBackStackFragment: Fragment() {
+open class CustomBackStackFragment : Fragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

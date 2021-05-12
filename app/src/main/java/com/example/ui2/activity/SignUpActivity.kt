@@ -51,14 +51,12 @@ class SignUpActivity : AppCompatActivity() {
         btnForgotPasswordSignUp.setOnClickListener {
             var username = sharedPreferences.getString("username", "").toString()
             var email = edtUsername.text.toString()
-            if (email.length==0){
+            if (email.length == 0) {
                 showDialogEmptyBox("Cần nhập email")
-            }
-            else{
-                if(username.length==0||username!=email){
+            } else {
+                if (username.length == 0 || username != email) {
                     showDialogEmptyBox("Không tồn tại tài khoản này")
-                }
-                else{
+                } else {
                     var intent = Intent(this, EmailActivity::class.java)
                     startActivity(intent)
                     overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left)
@@ -88,7 +86,7 @@ class SignUpActivity : AppCompatActivity() {
     private fun showDialogEmptyBox(string: String) {
         val builder = AlertDialog.Builder(this)
         builder.setMessage(string)
-            .setPositiveButton("Yes"){dialogInterface, which -> }
+            .setPositiveButton("Yes") { dialogInterface, which -> }
         val alertDialog: AlertDialog = builder.create()
         alertDialog.show()
     }

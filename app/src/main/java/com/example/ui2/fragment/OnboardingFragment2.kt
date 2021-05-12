@@ -26,10 +26,7 @@ class OnboardingFragment2 : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        val view:View = inflater.inflate(R.layout.fragment_onboarding2, container, false)
-
-
-
+        val view: View = inflater.inflate(R.layout.fragment_onboarding2, container, false)
         return view
     }
 
@@ -39,26 +36,33 @@ class OnboardingFragment2 : Fragment() {
         val editor = sharedPreferences.edit()
 
         btnSkipOnbroad2.setOnClickListener {
-            CoroutineScope(Dispatchers.IO).launch{
+            CoroutineScope(Dispatchers.IO).launch {
                 editor.putBoolean("statusOnboarding", true)
                 editor.commit()
             }
 
             val intent = Intent(this.activity, LoginActivity::class.java)
             startActivity(intent)
-            this.requireActivity().overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left)
+            this.requireActivity()
+                .overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left)
             requireActivity().finish()
         }
 
         btnNextOnbroad2.setOnClickListener {
-            var onboardingFragment3= OnbroadingFragment3()
+            var onboardingFragment3 = OnbroadingFragment3()
             setfragment(onboardingFragment3)
         }
     }
 
-    private fun setfragment(fragment: Fragment){
-        var fragmentTransaction: FragmentTransaction = requireActivity().supportFragmentManager.beginTransaction()
-        fragmentTransaction.setCustomAnimations(R.anim.slide_in_right, R.anim.slide_out_left, R.anim.slide_in_left, R.anim.slide_out_right)
+    private fun setfragment(fragment: Fragment) {
+        var fragmentTransaction: FragmentTransaction =
+            requireActivity().supportFragmentManager.beginTransaction()
+        fragmentTransaction.setCustomAnimations(
+            R.anim.slide_in_right,
+            R.anim.slide_out_left,
+            R.anim.slide_in_left,
+            R.anim.slide_out_right
+        )
         fragmentTransaction.replace(R.id.frame_Onboard, fragment)
         fragmentTransaction.addToBackStack(null)
         fragmentTransaction.commit()

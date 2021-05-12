@@ -18,8 +18,7 @@
         android:id="@+id/newsFragment"
         android:name="com.example.ui2.fragment.NewsFragment"
         android:label="fragment_news"
-        tools:layout="@layout/fragment_news">
-    </fragment>
+        tools:layout="@layout/fragment_news"></fragment>
     <fragment
         android:id="@+id/menuFragment"
         android:name="com.example.ui2.fragment.MenuFragment"

@@ -19,15 +19,14 @@ import kotlinx.coroutines.launch
 class OnbroadingFragment3 : Fragment() {
 
     private lateinit var sharedPreferences: SharedPreferences
-    private lateinit var editor:SharedPreferences.Editor
+    private lateinit var editor: SharedPreferences.Editor
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        val view:View =  inflater.inflate(R.layout.fragment_onbroading3, container, false)
-
+        val view: View = inflater.inflate(R.layout.fragment_onbroading3, container, false)
         return view
     }
 
@@ -38,25 +37,31 @@ class OnbroadingFragment3 : Fragment() {
         editor = sharedPreferences.edit()
 
         btnSkipOnbroad3.setOnClickListener {
-            CoroutineScope(Dispatchers.IO).launch{
+            CoroutineScope(Dispatchers.IO).launch {
                 editor.putBoolean("statusOnboarding", true)
                 editor.commit()
             }
 
             val intent = Intent(this.activity, LoginActivity::class.java)
             startActivity(intent)
-            requireActivity().overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left)
+            requireActivity().overridePendingTransition(
+                R.anim.slide_in_right,
+                R.anim.slide_out_left
+            )
             requireActivity().finish()
         }
 
         btnStart.setOnClickListener {
-            CoroutineScope(Dispatchers.IO).launch{
+            CoroutineScope(Dispatchers.IO).launch {
                 editor.putBoolean("statusOnboarding", false)
                 editor.commit()
             }
-            val intent = Intent(this.activity,LoginActivity::class.java)
+            val intent = Intent(this.activity, LoginActivity::class.java)
             startActivity(intent)
-            requireActivity().overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left)
+            requireActivity().overridePendingTransition(
+                R.anim.slide_in_right,
+                R.anim.slide_out_left
+            )
             requireActivity().finish()
         }
     }
